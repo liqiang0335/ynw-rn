@@ -1,0 +1,11 @@
+{
+  "name": "ynw-rn",
+  "version": "0.0.1",
+  "description": "utils for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liqiang0335@qq.com",
+  "license": "ISC"
+}
