@@ -11,7 +11,7 @@ const device = getDeviceData();
 
 ## BackArrow
 
-导航栏自定义返回组件
+返回组件
 
 ```js
 import BackArrow from "ynw-rn/BackArrow";
@@ -47,4 +47,31 @@ Article.navigationOptions = ({ navigation }) => {
     )
   };
 };
+```
+
+## useUpdater
+
+```js
+import React from "react";
+import useObservable from "ynw/react/useObservable";
+import { updater$ } from "ynw-rn/useUpdater";
+import { Text, View } from "react-native";
+
+export default function UpdateViewer() {
+  const updater = useObservable(updater$, { message: "" });
+  return (
+    <View>
+      <Text>数据更新:{updater.message}</Text>
+    </View>
+  );
+}
+```
+
+```js
+import useUpdater from "ynw-rn/useUpdater";
+
+function App() {
+  useUpdater();
+  return <AppNavigator />;
+}
 ```
